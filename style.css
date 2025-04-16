@@ -47,7 +47,9 @@ header a{
     overflow:hidden;
 }
 
-section#FormacaoAcademica{
+section#FormacaoAcademica,
+#softskill,
+#Projetos{
     border:none;
 }
 
@@ -131,7 +133,9 @@ body{
         gap: 1rem;
         flex-wrap: wrap;
      }
-     
+     section a{
+        color: purple;
+     }
      
 
      
