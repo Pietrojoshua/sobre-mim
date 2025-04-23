@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark" data-theme="Constraste">
     <head>
         <!-- Meta informações sobre a pagina -->
          <meta charset="utf-8">
@@ -21,13 +21,16 @@
             
          </style>
     </head>
+    <body>
+        
+    
     <!-- HTML NÃO TEM PESCOÇO!--> 
 
         <header>
            <nav>
             
             <h1>
-                <p style="color: brown;">PORTIFÓLIO</p> 
+                <p>PORTIFÓLIO</p> 
             </h1>
            </nav> 
             <nav>
@@ -39,8 +42,11 @@
                     <li><a href="#Projetos">Meus projetos</a></li>
                     <li><a href="#Artigos">Meus artigos</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li><span id="botao-tema">🌞</span></li>
+                    <li><span id="botao-contraste">🌓</span></li>
                 </ul>
             </nav>
+
 
         </header>
 
@@ -48,17 +54,24 @@
         <section id="sobreMim">
             
             <h1>Sobre mim</h1>
-            <p> Me chamo Pietro tenho 16 anos e estou formando no curso profissional de ADS(Analise de Desenvolvimento de Sistema) no SENAI .</p>
             <img src="pietro.jpg"
-            alt="Homem com roupa preta com um vidro de fundo, sorrindo" width="200" title="Foto de um Estudante">
-           <p>
-            Links Uteis:
-           </p>
-           <ul>
+        alt="Homem com roupa preta com um vidro de fundo, sorrindo" width="200" title="Foto de um Estudante">
+
+                    
+            <p>
+                Olá, Meu nome é Pietro, tenho 16 anos e atualmente estou no 2°ano do ensino medio 
+                na escola SESI Vila Leopoldina. Além disso, estou cursando Desenvolvimento de Sistemas no 
+                SENAI Conde José Vicente de Azevedo, onde estou aprendendo a programar, criar sites, sistemas e 
+                desenvolver soluções tecnologicas. Sou curioso, gosto de aprender coisas novas e estou sempre buscando evoluir 
+                na area da tecnologia.
+
+            </p>
+            <ul>
             <li>
-                <a href="https://github.com/Pietrojoshua" target="_blank">  GITHUB</a>
+            <a href="https://github.com/Pietrojoshua" target="_blank">  GITHUB</a>
             </li>
-           </ul>
+            </ul>
+           
             
 
             
@@ -157,7 +170,53 @@
         </section>
 
         <section id="Artigos">
-            <h2>Meus artigos</h2>
+            <h2 class="titulo-secao">Meus artigos</h2>
+            <div class="artigos cards-em-linha">
+                <article>
+                    <header>
+                        <h3 class="card-titulo">Portfólio profissional usando GitHub Pages</h3>
+                        <span class="data-publicacao">15 abril 2025</span>
+                        <span class="autor">Pietro Munoz</span>
+                    </header>
+                    <p>Crie e publique seu portfólio profissional usando GitHub Pages, uma maneira fácil e gratuita de mostrar seus projetos e habilidades.</p>
+                    <footer>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+                    </footer>
+
+                </article>
+            <div class="artigos cards-em-linha">
+                <article>
+                    <header>
+                        <h3 class="card-titulo">Portfólio profissional usando GitHub Pages</h3>
+                        <span class="data-publicacao">28 setembro 2025</span>
+                        <span class="autor">Pietro Munoz</span>
+                    </header>
+                    <p>Oque é um sistema backend e como ele funciona na pratica?</p>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+                    </footer>
+
+                </article>
+            <div class="artigos cards-em-linha">
+                <article>
+                    <header>
+                        <h3 class="card-titulo">Portfólio profissional usando GitHub Pages</h3>
+                        <span class="data-publicacao">9 maio 2025</span>
+                        <span class="autor">Pietro Munoz</span>
+                    </header>
+                    <p>Oque é um sistema FrontEnd e como ele funciona na pratica?</p>
+                        <button type="button" class="botao botao-continue">Continue lendo</button>
+                        <button type="button" class="botao botao-compartilhar">Compartilhar</button>
+                    </footer>
+
+                </article>
+
+
+
+
+
+            </div>
         </section>
 
 
@@ -191,6 +250,38 @@
             
             
         </footer>
+        <script>
+            document.querySelector('#botao-tema').addEventListener('click', trocaTema);
+
+            function trocaTema(){
+                const root = document.documentElement;
+
+                if(root.getAttribute('data-theme') === 'dark') {
+                    root.removeAttribute('data-theme');
+
+                }else {
+                    root.setAttribute('data-theme', 'dark')
+                }
+            }
+            </script>
+
+            <script>
+
+                document.querySelector('#botao-contraste').addEventListener('click', trocaTema);
+                
+                function trocaTema(){
+                    const root = document.documentElement;
+                    
+                    if(root.getAttribute('data-theme') === 'Constraste') {
+                        root.removeAttribute('data-theme');
+                        
+                    }else {
+                        root.setAttribute('data-theme', 'Constraste')
+                    }
+                }
+                </script>
+
+
             
     </body>
 </html>

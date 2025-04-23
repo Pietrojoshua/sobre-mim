@@ -1,143 +1,285 @@
 /* CSS externo */
+
+/* Tema principal */
+:root {
+    --cor-primaria: rgb(82, 12, 12);
+    --cor-segundaria:  rgb(165, 42, 42);
+    --cor-botao: #333;
+    --cor-fundo-pagina: #fff;
+    --cor-fundo-cartao: #fff;
+    --cor-primaria-texto: #0f0e0e;
+    --cor-segundaria-texto: #555;
+    --cor-bordas: #c0a9a9;
+    --borda-cartao: none
+}
+
+[data-theme="dark"]{
+    --cor-primaria: #36b864;
+    --cor-segundaria: #63f8c1;
+    --cor-botao: #fff;
+    --cor-fundo-pagina: #211710;
+    --cor-fundo-cartao: #4e4032;
+    --cor-primaria-texto: #fefefe;
+    --cor-segundaria-texto: #167953;
+    --cor-bordas:#aaa;
+    --borda-cartao: none
+}
+[data-theme="Constraste"]{
+    --cor-primaria: #0a0b0b;
+    --cor-segundaria: #1a7796;
+    --cor-botao: #fff;
+    --cor-fundo-pagina: #211710;
+    --cor-fundo-cartao: #4e4032;
+    --cor-primaria-texto: #f7f1f1;
+    --cor-segundaria-texto: #5e6565;
+    --cor-bordas:#0b0b0b;
+    --borda-cartao: 2px solid #4dcdf0;
+}
+
+
+
+
 body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: var(--cor-fundo-pagina);
+
 }
 
 h1  {
-    font-size: 2rem; /*1rem = 16px -> 1em = 'M' */
-    font-weight: bold;
+font-size: 2rem; /*1rem = 16px -> 1em = 'M' */
+font-weight: bold;
+color: var(--cor-primaria-texto);
     
 }
 h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: darkred;
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--cor-segundaria-texto)
 }
 
 header {
-    background-color: rgb(82, 12, 12);
-    padding: 1rem 2rem;
-    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
-    position: sticky; /* pode ser necessario top,left, bottom ou right */
-    top: 0
+background-color: var(--cor-primaria);
+ padding: 1rem 2rem;
+ box-shadow: 0px 4px 4px var(--cor-botao);
+position: sticky; /* pode ser necessario top,left, bottom ou right */
+top: 0
 }
 
 header ul {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+display: flex;
+justify-content: center;
+ gap: 1rem;
 }
 
 header a{
-    color:white;
-    font-weight: 700;
-    padding: .5rem 1rem
+color: white;
+font-weight: 700;
+padding: .5rem 1rem
 }
  
   header a:hover /*passando por cima */ {
-    background-color:brown ;
+background-color:var(--cor-segundaria)
   }
 
  section {
-    min-height: 30vh; /* -> viewport height (altura da viewport) */
-    margin: 10vh 2rem;
-    scroll-margin-top: 4rem;
-    padding: 1rem;
-    border: 5px solid #000000;
-    overflow:hidden;
+min-height: 30vh; /* -> viewport height (altura da viewport) */
+margin: 10vh 2rem;
+scroll-margin-top: 4rem;
+padding: 1rem;
+border: 5px solid var(--cor-bordas);
+ overflow:hidden;
+color: var(--cor-primaria-texto);
 }
 
 section#FormacaoAcademica,
 #softskill,
 #Projetos{
-    border:none;
+border:none;
 }
 
 .titulo-secao{
-    text-align: center;
-    margin-bottom: 2rem;
+text-align: center;
+margin-bottom: 2rem;
+    
+}
+#sobreMim{
+ display: block;
+ padding: 4rem 10rem;
+}
+#sobreMim img{
+float: left;
+margin: 0 2rem 1rem 0;
+width: 30vw;
+border-radius: 50%;
+border: 5px solid var(--cor-bordas);
+box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+#sobreMim p{
+text-align: justify;
+margin-bottom: 1rem;
+line-height: 1rem;
+   
+}
+
+.minhas-redes{
+clear: both;
+display: flex;
+justify-content: center;
+ gap: 2rem;
+font-size: 1.1rem;
 
 }
 section#HardSkill{
-    border:none;
+border:none;
 }
 
 p {
-    margin-bottom: 1rem;
-
+margin-bottom: 1rem;
+    
 }
 form{
-    display:flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
+display:flex;
+flex-direction: column;
+gap: 1rem;
+max-width: 500px;
 
 }
 header nav{
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace
+text-align: center;
+font-family: 'Courier New', Courier, monospace
 }
 body{
-    text-align: center;
+text-align: center;
 }
-    h2{
-        font-style: italic;
+h2{
+font-style: italic;
     } 
-    h1{
-        font-style: italic;
+    
+h1{
+ font-style: italic;
     }
-     input[type="text"],
-     input[type="email"],
-     input,
-     textarea {
-        border: 1px solid #ccc;
-        border-radius: 8px ;
-        padding: .25rem .75rem;
-        color: #555;
-        resize: none;
+ input[type="text"],
+ input[type="email"],
+input,
+textarea {
+border: 1px solid #ccc;
+border-radius: 8px ;
+padding: .25rem .75rem;
+color: var(--cor-bordas);
+resize: none;
      }
-     input[type="submit"]{
-        background-color: darkred;
-        color: #ffffff;
-        padding: .25rem .75rem;
-        border: none;
-        font-weight: 700;
+input[type="submit"]{
+background-color: var(--cor-fundo);
+color: var(--cor-botao);
+padding: .25rem .75rem;
+border: none;
+font-weight: 700;
      }
 
      /*ESTILOS DOS CARDS*/
      
-     .card{
-        border-radius: 8px;
-        padding:2rem;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        list-style-image: none;
+ .cards-em-linha {
+display: flex;
+flex-direction: row;
+gap: 1rem;
+flex-wrap: wrap;
      }
-     .titulo-card{
-        font-weight: bold;
-        color: darkred;
-        font-size: 1.3rem;
-     }
-     .instituicao-card{
-            font-size: 1.1rem;
-            color: #555;
-     }
-     .cards-em-coluna{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+ .card{
+ border-radius: 8px;
+ padding:2rem;
+ box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+ list-style-image: none;
+ border: var(--borda-cartao)
+         
+        }
+
+.card li {
+ margin-bottom: 0.5rem;
+        }
+
+.titulo-card{
+ font-weight: bold;
+color: var(--cor-primaria-texto);
+ font-size: 1.3rem;
+        }
+.instituicao-card{
+font-size: 1.1rem;
+color: var(--cor-bordas);
+        }
+.cards-em-coluna{
+display: flex;
+flex-direction: column;
+gap: 1rem;
+            
+           }
+        
+ .card-imagem img {
+ width: 100%;
+ border-radius: 8px;
 
      }
-     .cards-em-linha {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        flex-wrap: wrap;
-     }
-     section a{
-        color: purple;
-     }
-     
 
+.card-descricao {
+margin-top: 0.5rem;
+font-size: 0.95rem;
+color: var(--cor-segundaria-texto);
+     }
+
+ #meusProjetos .card {
+width: 30%;
+     }
+
+.botao{
+padding: 0.5rem 1rem;
+border: none;
+border-radius: 4px;
+margin: 0.3rem 0.3rem 0 0;
+cursor: pointer;
+font-weight: bold;
+     }
+.botao:hover {
+ cursor: pointer;
+background-color: var(--cor-segundaria-texto);
+     }
+.botao-demo,
+ .botao-continue {
+background-color: var(--cor-primaria);
+color: var(--cor-primaria-texto);
+
+     }
+.botao-compartilhar {
+background-color: var(--cor-bordas);
+   
+        }
+        
+.botao-compartilhar:hover{
+background-color: var(--cor-primaria);
+        }
+
+.artigos header{
+background-color: var(--cor-primaria);
+box-shadow: var(--cor-bordas);
+position: initial;
+         }
+        
+ .artigos{
+justify-content: space-evenly;
+        }
+        
+.artigos article {
+display: flex;
+flex-direction: column;
+width: 30%;
+padding: 1rem;
+border-left: 5px solid var(--cor-primaria);
+margin-bottom: 1rem;
+border-radius: 8px;
+        }
+.artigo h3 {
+margin-top: 0;
+color: var(--cor-segundaria);
+margin-bottom: 1rem;
+    }
      
      
         
